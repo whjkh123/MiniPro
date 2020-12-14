@@ -79,6 +79,7 @@ public class PhoneApp {
 				int num = sc.nextInt();
 
 				person.remove(num);
+				sc.nextLine();// Scanner 버그 대책
 
 				System.out.println("");
 			} else if (str.equals("4")) {
