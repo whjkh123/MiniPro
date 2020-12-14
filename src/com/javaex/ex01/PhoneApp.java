@@ -80,7 +80,7 @@ public class PhoneApp {
 
 				person.remove(num);
 				sc.nextLine();// Scanner 버그 대책
-
+				System.out.println("[삭제되었습니다.]");
 				System.out.println("");
 			} else if (str.equals("4")) {
 				System.out.println("<4.검색>");
