@@ -18,9 +18,6 @@ public class PhoneApp {
 		Reader fr = new FileReader("C:\\javaStudy\\workspace\\PhoneDB.txt");
 		BufferedReader br = new BufferedReader(fr);
 
-		Writer fw = new FileWriter("C:\\javaStudy\\workspace\\PhoneDB(copy).txt");
-		BufferedWriter bw = new BufferedWriter(fw);
-
 		List<Person> person = new ArrayList<Person>();
 
 		Scanner sc = new Scanner(System.in);
@@ -104,7 +101,6 @@ public class PhoneApp {
 			}
 		}
 		br.close();
-		bw.close();
 		sc.close();
 
 	}
