@@ -1,19 +1,15 @@
 package com.javaex.ex01;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.Reader;
-import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class PhoneApp {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 
 		Reader fr = new FileReader("C:\\javaStudy\\workspace\\PhoneDB.txt");
 		BufferedReader br = new BufferedReader(fr);
@@ -53,7 +49,7 @@ public class PhoneApp {
 				}
 
 				for (int i = 0; i < person.size(); i++) {
-					person.get(i).draw(i + 1);
+					person.get(i).showInfo(i + 1);
 				}
 				System.out.println("");
 			} else if (str.equals("2")) {
@@ -80,6 +76,7 @@ public class PhoneApp {
 
 				person.remove(num);
 				sc.nextLine();// Scanner 버그 대책
+
 				System.out.println("[삭제되었습니다.]");
 				System.out.println("");
 			} else if (str.equals("4")) {
@@ -92,9 +89,10 @@ public class PhoneApp {
 					// 문자열.contains("찾을 문자열") > 한 문자열이 특정 문자열을 포함하고 있는지 확일할 때 사용
 					// >> 포함 여부만을 true, false로 반환
 					if (person.get(i).getName().contains(name)) {
-						person.get(i).draw(i + 1);
+						person.get(i).showInfo(i + 1);
 					}
 				}
+				System.out.println("[검색이 완료되었습니다.]");
 				System.out.println("");
 			} else {
 				System.out.println("[다시 입력해주세요.]");
@@ -103,7 +101,5 @@ public class PhoneApp {
 		}
 		br.close();
 		sc.close();
-
 	}
-
 }

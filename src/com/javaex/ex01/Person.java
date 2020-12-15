@@ -39,8 +39,8 @@ public class Person {
 		this.company = company;
 	}
 
-	public void draw(int i) {
-		System.out.println(i + ". " + name + "\t" + hp + "\t" + company);
+	public void showInfo(int cnt) {
+		System.out.println(cnt + ". " + name + "\t" + hp + "\t" + company);
 	}
 
 	@Override
