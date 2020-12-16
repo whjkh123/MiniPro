@@ -54,7 +54,7 @@ public class PhoneView {
 		System.out.print(">번호: ");
 		int num = sc.nextInt();
 
-		person.remove(num);
+		person.remove(num - 1);
 		sc.nextLine();
 
 		System.out.println("[삭제되었습니다.]");
